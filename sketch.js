@@ -13,7 +13,7 @@ let board = [
   let w; // = width / 3;
   let h; // = height / 3;
   var x = window.matchMedia("(min-width: 1025px)")
-
+  let fisrtMove=Math.floor(Math.random()*2);
   let vvv=300;
   let vvw=300;
 
@@ -43,7 +43,10 @@ let board = [
   
     let random1 = Math.floor(Math.random()*3);
     let random2 = Math.floor(Math.random()*3);
-    board[random1][random2] = ai;
+    if(fisrtMove==1){
+
+      board[random1][random2] = ai;
+    }
     // bestMove();
   }
   
